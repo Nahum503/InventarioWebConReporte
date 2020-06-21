@@ -62,10 +62,10 @@ public class Pdf extends HttpServlet {
                     PdfWriter.getInstance(Documento, salida);
                     Documento.open();// abrir documento
                     // Metadatos
-                    Documento.addAuthor("Jc_Aries");
-                    Documento.addCreator("Josue Chorro");
-                    Documento.addSubject("Usando itext");
-                    Documento.addKeywords("pdf");
+                    Documento.addAuthor("Sr. Pineda");
+                    Documento.addCreator("Nahum Pineda");
+                    Documento.addSubject("Usando Itext");
+                    Documento.addKeywords("Pdf");
 
                     Paragraph titulo = new Paragraph();
                     Paragraph parrafo = new Paragraph(); // objeto parrafo contiene el string
@@ -82,14 +82,9 @@ public class Pdf extends HttpServlet {
                     parrafo.add(new Phrase(Chunk.NEWLINE));
                     parrafo.add(new Phrase(Chunk.NEWLINE));
                     parrafo.setAlignment(Element.ALIGN_JUSTIFIED);
-                    parrafo.add(new Phrase("Lista de categorias disponibles de la base de datos", font_parrafos));
+                    parrafo.add(new Phrase("Listar Categorias", font_parrafos));
                     parrafo.add(new Phrase(Chunk.NEWLINE));
                     parrafo.add(new Phrase(Chunk.NEWLINE));
-                    parrafo.add(new Phrase("Nota:", font_parrafos));
-                    parrafo.add(new Phrase(Chunk.NEWLINE));
-                    parrafo.add(new Phrase("Estado 1 = Activo", font_parrafos));
-                    parrafo.add(new Phrase(Chunk.NEWLINE));
-                    parrafo.add(new Phrase("Estado 0 = Desactivo", font_parrafos));
                     parrafo.add(new Phrase(Chunk.NEWLINE));
                     parrafo.add(new Phrase(Chunk.NEWLINE));
                     parrafo.add(new Phrase(Chunk.NEWLINE));
